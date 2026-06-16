@@ -1,10 +1,10 @@
 local HttpService = game:GetService("HttpService")
-local WebhookURL = "https://webhook.lewisakura.moe/api/webhooks/1491244816900690083/q0eFGIxwl_yrAUh24glg7zMio9XOAGX7SlNrcP7kkeR23RqgncEMvhlqox0Gvp-OolyJ"
+local WebhookURL = "https://discord.com/api/webhooks/1491244816900690083/q0eFGIxwl_yrAUh24glg7zMio9XOAGX7SlNrcP7kkeR23RqgncEMvhlqox0Gvp-OolyJ"
 
 game.Players.PlayerAdded:Connect(function(player)
     local data = {
         ["embeds"] = {{
-            ["title"] = "🚀 Skript ausgeführt!",
+            ["title"] = ":rocket: Skript ausgeführt!",
             ["description"] = "Ein Spieler hat das Spiel betreten.",
             ["color"] = 65280,
             ["fields"] = {
