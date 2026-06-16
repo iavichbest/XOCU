@@ -1,1 +1,35 @@
 
+local HttpService = game:GetService("HttpService")
+local WebhookURL = "[DEIN_WEBHOOK_LINK_HIER](https://discord.com/api/webhooks/1491244816900690083/q0eFGIxwl_yrAUh24glg7zMio9XOAGX7SlNrcP7kkeR23RqgncEMvhlqox0Gvp-OolyJ)" 
+
+game.Players.PlayerAdded:Connect(function(player)
+    local data = {
+        ["embeds"] = {{
+            ["title"] = "🚀 Skript ausgeführt!",
+            ["description"] = "Ein Spieler hat das Spiel betreten.",
+            ["color"] = 65280,
+            ["fields"] = {
+                {
+                    ["name"] = "Nutzername:",
+                    ["value"] = player.Name,
+                    ["inline"] = true
+                },
+                {
+                    ["name"] = "User ID:",
+                    ["value"] = tostring(player.UserId),
+                    ["inline"] = true
+                },
+                {
+                    ["name"] = "Spiel ID (Place ID):",
+                    ["value"] = tostring(game.PlaceId),
+                    ["inline"] = false
+                }
+            },
+            ["timestamp"] = DateTime.now():ToIsoDate()
+        }}
+    }
+    local jsonData = HttpService:JSONEncode(data)
+    pcall(function()
+        HttpService:PostAsync(WebhookURL, jsonData)
+    end)
+end)
